@@ -1,0 +1,5 @@
+Has a Abstract factory which is concerned for creating one type of product
+
+class Factory{
+    Product* CreateProduct();
+}

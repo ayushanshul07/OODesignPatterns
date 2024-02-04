@@ -1,0 +1,32 @@
+Adapter pattern doesn't add any extra behaviour rather adapts it according to the adaptee
+
+class Client{
+    Client(ITarget* inp): _tar(inp){
+
+    }
+
+private:
+    ITarget* _tar;
+}
+
+/*
+_inp = new Adapter(new Adaptee());
+
+*/
+
+abstract class ITarget{
+    void request();
+}
+
+class Adapter: public ITarget{
+
+    Adapter(Adaptee* inp): _adaptee(inp){
+        
+    }
+
+    void request(){
+        this._adaptee->specificRequest();
+    }
+    private:
+    Adaptee* _adaptee;
+}

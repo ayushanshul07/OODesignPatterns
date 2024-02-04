@@ -1,0 +1,31 @@
+Decorator patterns decorates an object with added behaviour
+The Decorator "is a and has a" type it wants to decorate
+
+abstract class Beverage{
+    string getDesc();
+    int getCost();
+}
+
+class Decaf: public Beverage{
+
+}
+
+abstract class AddOnDecorator: public Beverage{
+    string getDesc();
+    int getCost();
+}
+
+class CaramelDecorator: public AddOnDecorator{
+
+    CaramelDecorator(Beverage* inp): _beverage(inp){
+        mycost = 3;
+    }
+
+    int getCost(){
+        return this._beverage.getCost() + mycost;
+    }
+
+    private:
+    Beverage* _beverage;
+    const int mycost;
+}

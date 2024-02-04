@@ -1,0 +1,45 @@
+Observer design pattern is used when we have a group of Observers which observes the state change on observable and does some action based on it.
+Instead of polling we do a push and pull.
+
+abstract class IObservable{
+    void add(IObserver*)
+    void remove(IObserver*)
+    void notify()
+}
+
+abstract class IObserver{
+    void update()
+}
+
+class WeatherStation: public IObservable{
+
+    void add(IObserver* inp){
+        _this._list.push(inp)
+    }
+    void remove(IObserver*)
+    void notify(){
+        for(IObserver o: _list){
+            o->update();
+        }
+    }
+
+    int getTemperature{
+
+    }
+
+    private:
+    vector<IObserver*> _list;
+}
+
+class DisplayObserver: public IObserver{
+    DisplayObserver(WeatherStation* ws)_ws(ws){ /*  Notice how a display observer has a weather station*/
+
+    }
+
+    void update(){
+        this._ws->getTemperature();
+    }
+
+    private:
+    WeatherStation* _ws
+}

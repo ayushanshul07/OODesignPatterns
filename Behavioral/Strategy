@@ -1,0 +1,36 @@
+Strategy pattern is wishful thinking of how do i make an object out of it behaviours.
+Its like swapping out the algorithms without being affected by it.
+
+If it flies in a particular way and if quakes in a way and displays in a way then we call it a wild duck.
+similar for rubber duck and mountain duck.
+We don't need instances of these ducks.
+It's just different instances happens to be a combination of behaviours.
+
+class Duck{
+
+    Duck(IQuackBehav* qb, IFlyBehav* fb, IDispBehav* db):_qb(qb), _fb(fb), _db(db){
+
+    }
+
+    void fly(){
+        this->_fb->fly();
+    }
+
+    private:
+    IQuackBehav _qb;
+    IFlyBehav   _fb;
+    IDispBehav  _db;
+}
+
+abstract class IFlyBehav{
+
+}
+
+class StraightLineFly: public IFlyBehav{
+
+}
+
+class ZigZagFly: public IFlyBehav{
+    
+}
+

@@ -1,0 +1,6 @@
+Has a Abstract factory which is concerned for creating a group of related products
+
+class Factory{
+    ProductA* CreateProductA();
+    ProductB* CreateProductB();
+}
