@@ -111,5 +111,5 @@ class ParkingLot{
     std::vector<ParkingSpot> parkingArea;
     std::unordered_set<ParkingSpot> availableSpots;
     std::unordered_set<ParkingSpot> reservedSpots;
-    IParkingStrategy* bookingStrategy;
+    IParkingStrategy* parkingStrategy;
 };
