@@ -1,0 +1,12 @@
+Facade provides unified interface to a set of interfaces in a subsystem. It provides a higher level interface that makes
+the subsystem easier to use.
+
+                  |
+                  |
+ _______          |--------
+ |Facade|    ---> |--------
+ ________         |-------  Many compplex classes interacting
+                  |--------
+                  |--------
+
+Facade means the the front wall of a large building that you see from the outside
