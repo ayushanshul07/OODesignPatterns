@@ -1,0 +1,24 @@
+This design pattern is used to represent tree hierarchy. It allows us to treat composite and single object uniformly.
+
+class Component{
+    virtual void operation() = 0;
+    add()
+    remove()
+    getChild()
+}
+
+class Composite: public Component{
+    void operation(){
+
+    }
+}
+
+class Leaf: public Component{
+    void operation(){
+
+    }
+}
+
+/*
+Can be used to generate HTML for a todo list, with project and sub-list.
+*/
